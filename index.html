@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>MOON LIGHT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">LOGO</a>
+        <ul>
+            <li><a href="#" class="active">HOME</a></li>
+            <li><a href="cric.html">CRICKET</a></li>
+            <li><a href="quotes.html">QUOTES</a></li>
+            <li><a href="#">CONTACT <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown">
+                <ul>
+                    <li><a href="https://www.instagram.com/sowrabh_bidarkar/">INSTAGRAM</a></li>
+                    <li><a href="https://www.facebook.com/sowrabh.bidarkar/">FACEBOOK</a></li>
+                    <li><a href="https://github.com/SowrabhBidarkar">GITHUB</a></li>
+                    <li><a href="">LINKED IN</a></li>
+                </ul>
+            </div>
+        </li>
+        
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="hill back.png" id="hill_back">
+        <h2 id="text">SOWRABH</h2>
+        <a href="#sec" id="btn">EXPLORE</a>
+        <img src="hill front.png " id="hill_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>I AM SOWRABH BIDARKAR</h2>
+        <p>Seeking the position to utilize my skills and abilities in
+            the Computer and Information Technology industry
+            that offers me to grow and learn from experienced
+            team members while drawing on project experience</p>
+    </div>
+
+    <script>
+        let stars=document.getElementById('stars');
+        let moon=document.getElementById('moon');
+        let hill_back=document.getElementById('hill_back');
+        let text=document.getElementById('text');
+        let btn=document.getElementById('btn');
+        let hill_front=document.getElementById('hill_front');
+        let header=document.querySelector('header');
+        
+        window.addEventListener('scroll',function()
+        {
+            let value=window.scrollY;
+            stars.style.left = value * 0.25 +'px';
+            moon.style.top=value * 1.05 +'px';
+            hill_back.style.top=value * 0.5 +'px';
+            hill_front.style.top=value * 0 +'px';
+            text.style.marginRight=value * 4 +'px';
+            text.style.marginTop=value * 1.5 +'px';
+            btn.style.marginTop=value * 1.5 +'px';
+            header.style.top=value * 0.5 +'px';
+        })
+    </script>
+</body>
+</html>
